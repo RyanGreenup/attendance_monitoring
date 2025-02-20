@@ -9,7 +9,7 @@ This uses a combination of data stored in SEQTA and Google Drive in both cases v
 ### Credentails
 #### SEQTA API
 
-> ![NOTE]
+> [!NOTE]
 > Long term this will be cached on the server so teaching staff do not have access to the full endpoint
 
 Need to have a .env file like this:
