@@ -1,0 +1,6 @@
+.aider*
+.env
+src/attendance_monitoring/__pycache__
+src/attendance_monitoring/data
+src/data
+data
