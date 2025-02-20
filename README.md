@@ -39,3 +39,13 @@ SEQTA_USERNAME=xxxxxx
 }
 ```
 
+### Running the Script
+The script is packaged with `uv` so it should be sufficient to run it with:
+
+> [!NOTE]
+> No GUI is yet implemented
+
+```sh
+uv run gui
+```
+

@@ -49,14 +49,14 @@ def get_attendance_data(start_date: date) -> pl.DataFrame:
 def main():
     # df = join_data(DataStore.DRIVE_API)
     df = join_data(DataStore.LOCAL).sort(["absence_date", "period_code"])
-    (
-        df.with_columns(absence_ratio=pl.lit(1))
-        .rolling(index_column="absence_date", period="1mo", group_by="student_code")
-        .agg([pl.col("absence_ratio").mean()])
-    )
+    # (
+    #     df.with_columns(absence_ratio=pl.lit(1))
+    #     .rolling(index_column="absence_date", period="1mo", group_by="student_code")
+    #     .agg([pl.col("absence_ratio").mean()])
+    # )
 
-    df.group_by("student_code", "absence_date", "code").len()
-    ts = pl.DataFrame(df.drop("absence_date"), index=df.select("absence_date"))
+    # df.group_by("student_code", "absence_date", "code").len()
+    # ts = pl.DataFrame(df.drop("absence_date"), index=df.select("absence_date"))
     print(df)
 
 
